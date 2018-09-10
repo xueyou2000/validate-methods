@@ -1,0 +1,60 @@
+{
+  "name": "@validate/validate-methods",
+  "version": "1.0.0",
+  "publisher": "XueYou",
+  "description": "常用验证函数",
+  "main": "dist/validate-methods.js",
+  "module": "dist/validate-methods.es.js",
+  "files": [
+    "/dist/"
+  ],
+  "scripts": {
+    "build": "cross-env NODE_ENV=production rollup -c",
+    "test": "jest",
+    "publish": "test && npm publish"
+  },
+  "keywords": [
+    "validate"
+  ],
+  "author": {
+    "name": "XueYou",
+    "email": "xueyoucd@gmail.com"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "http://m.bank-pay.com:8081/repository/npm-my/"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.2",
+    "cross-env": "^5.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.5.0",
+    "rollup": "^0.65.2",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-progress": "^0.4.0",
+    "rollup-plugin-typescript2": "^0.17.0",
+    "ts-jest": "^23.1.4",
+    "typescript": "^3.0.3"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}"
+    ],
+    "transform": {
+      "^.+\\.ts?$": "ts-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy"
+    },
+    "testMatch": [
+      "<rootDir>/tests/**/*.spce.(j|t)s"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|ts|tsx)$"
+    ]
+  }
+}
