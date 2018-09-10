@@ -2,6 +2,7 @@
   "name": "@validate/validate-methods",
   "version": "1.0.0",
   "publisher": "XueYou",
+  "typings": "dist/src/index.d.ts",
   "description": "常用验证函数",
   "main": "dist/validate-methods.js",
   "module": "dist/validate-methods.es.js",
@@ -19,6 +20,10 @@
   "author": {
     "name": "XueYou",
     "email": "xueyoucd@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://m.bank-pay.com:3080/xueyou/validate-methods"
   },
   "license": "MIT",
   "publishConfig": {
