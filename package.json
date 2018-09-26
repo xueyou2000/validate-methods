@@ -1,6 +1,6 @@
 {
   "name": "@validate/validate-methods",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "XueYou",
   "typings": "dist/src/index.d.ts",
   "description": "常用验证函数",
@@ -12,7 +12,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production rollup -c",
     "test": "jest",
-    "_publish": "npm run test && npm publish"
+    "_publish": "npm run test && npm run build && npm publish"
   },
   "keywords": [
     "validate"
