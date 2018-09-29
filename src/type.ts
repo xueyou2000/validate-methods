@@ -17,7 +17,7 @@ export function IsNumber(number: string | number): boolean {
  * 验证函数类型
  * @param func 函数
  */
-export function IsFunction(func: Function): boolean {
+export function IsFunction(func: any): boolean {
   if (IsEmpy(func)) { return false; }
   const typeName: string = Object.prototype.toString.call(func);
   return typeName.indexOf('Function') != -1;
@@ -27,7 +27,7 @@ export function IsFunction(func: Function): boolean {
  * 验证数组类型
  * @param array 数组
  */
-export function IsArray(array: any[]): boolean {
+export function IsArray(array: any): boolean {
   if (!array) { return false; }
   const typeName: string = Object.prototype.toString.call(array);
   return typeName.indexOf('Array') != -1;
