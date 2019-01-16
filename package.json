@@ -1,65 +1,65 @@
 {
-  "name": "@validate/validate-methods",
-  "version": "1.0.3",
-  "publisher": "XueYou",
-  "typings": "dist/src/index.d.ts",
-  "description": "常用验证函数",
-  "main": "dist/validate-methods.js",
-  "module": "dist/validate-methods.es.js",
-  "files": [
-    "/dist/"
-  ],
-  "scripts": {
-    "build": "cross-env NODE_ENV=production rollup -c",
-    "test": "jest",
-    "_publish": "npm run test && npm run build && npm publish"
-  },
-  "keywords": [
-    "validate"
-  ],
-  "author": {
-    "name": "XueYou",
-    "email": "xueyoucd@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://m.bank-pay.com:3080/xueyou/validate-methods"
-  },
-  "license": "MIT",
-  "publishConfig": {
-    "registry": "http://m.bank-pay.com:8081/repository/npm-my/"
-  },
-  "devDependencies": {
-    "@types/jest": "^23.3.2",
-    "cross-env": "^5.2.0",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^23.5.0",
-    "rollup": "^0.65.2",
-    "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-progress": "^0.4.0",
-    "rollup-plugin-typescript2": "^0.17.0",
-    "ts-jest": "^23.1.4",
-    "typescript": "^3.0.3"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}"
+    "name": "@validate/validate-methods",
+    "version": "1.0.4",
+    "publisher": "XueYou",
+    "typings": "dist/src/index.d.ts",
+    "description": "常用验证函数",
+    "main": "dist/validate-methods.js",
+    "module": "dist/validate-methods.es.js",
+    "files": [
+        "/dist/"
     ],
-    "transform": {
-      "^.+\\.ts?$": "ts-jest"
+    "scripts": {
+        "build": "cross-env NODE_ENV=production rollup -c",
+        "test": "jest",
+        "_publish": "npm run test && npm run build && npm publish"
     },
-    "moduleNameMapper": {
-      "\\.(css|less)$": "identity-obj-proxy"
+    "keywords": [
+        "validate"
+    ],
+    "author": {
+        "name": "XueYou",
+        "email": "xueyoucd@gmail.com"
     },
-    "testMatch": [
-      "<rootDir>/tests/**/*.spce.(j|t)s"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ],
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|ts|tsx)$"
-    ]
-  }
+    "repository": {
+        "type": "git",
+        "url": "http://m.bank-pay.com:3080/xueyou/validate-methods"
+    },
+    "license": "MIT",
+    "publishConfig": {
+        "registry": "http://m.bank-pay.com:8081/repository/npm-my/"
+    },
+    "devDependencies": {
+        "@types/jest": "^23.3.2",
+        "cross-env": "^5.2.0",
+        "identity-obj-proxy": "^3.0.0",
+        "jest": "^23.5.0",
+        "rollup": "^0.65.2",
+        "rollup-plugin-node-resolve": "^3.4.0",
+        "rollup-plugin-progress": "^0.4.0",
+        "rollup-plugin-typescript2": "^0.17.0",
+        "ts-jest": "^23.1.4",
+        "typescript": "^3.0.3"
+    },
+    "jest": {
+        "collectCoverageFrom": [
+            "src/**/*.{js,jsx,ts,tsx}"
+        ],
+        "transform": {
+            "^.+\\.ts?$": "ts-jest"
+        },
+        "moduleNameMapper": {
+            "\\.(css|less)$": "identity-obj-proxy"
+        },
+        "testMatch": [
+            "<rootDir>/tests/**/*.spce.(j|t)s"
+        ],
+        "moduleFileExtensions": [
+            "ts",
+            "js"
+        ],
+        "transformIgnorePatterns": [
+            "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|ts|tsx)$"
+        ]
+    }
 }
