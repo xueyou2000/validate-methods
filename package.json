@@ -2,14 +2,13 @@
     "name": "@validate/validate-methods",
     "version": "1.0.5",
     "publisher": "XueYou",
-    "typings": "dts/index.d.ts",
+    "typings": "es/index.d.ts",
     "description": "常用验证函数",
     "main": "dist/index.lib.js",
     "module": "es/index.js",
     "files": [
         "es",
-        "dist",
-        "dts"
+        "dist"
     ],
     "scripts": {
         "test": "jest",
