@@ -7,7 +7,7 @@
 Using Browser:
 
 ```html
-<script src="./validate-methods.js"></script>
+<script src="./dist/index.lib.js"></script>
 <script>
     console.log(ValidateMethods.IsEmail("xx@gmail.com") === true);
 </script>
@@ -16,11 +16,11 @@ Using Browser:
 Or Using npm:
 
 ```sh
-npm install --save @validate/validate-methods
+npm install --save validate-methods
 ```
 
 ```js
-import { IsEmail } from "@validate/validate-methods";
+import { IsEmail } from "validate-methods";
 console.log(IsEmail("xx@gmail.com") === true);
 ```
 

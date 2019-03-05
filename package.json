@@ -1,5 +1,5 @@
 {
-    "name": "@validate/validate-methods",
+    "name": "validate-methods",
     "version": "1.0.5",
     "publisher": "XueYou",
     "typings": "es/index.d.ts",
