@@ -4,11 +4,11 @@
     "publisher": "XueYou",
     "typings": "dts/index.d.ts",
     "description": "常用验证函数",
-    "main": "es/index.js",
+    "main": "dist/index.lib.js",
     "module": "es/index.js",
     "files": [
         "es",
-        "lib",
+        "dist",
         "dts"
     ],
     "scripts": {
@@ -32,7 +32,7 @@
     },
     "license": "MIT",
     "publishConfig": {
-        "registry": "http://m.bank-pay.com:8081/repository/npm-my/"
+        "registry": "http://192.168.1.22:8081/repository/npm-my/"
     },
     "devDependencies": {
         "@types/jest": "^24.0.6",
