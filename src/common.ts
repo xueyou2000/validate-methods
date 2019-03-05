@@ -3,21 +3,20 @@
  * @description 常用验证函数
  */
 
-import { IsEmpy } from './helper';
+import { IsEmpy } from "./helper";
 
 /**
  * 验证值是否必填
  * @param value 比较值
  */
 export function Required(value: any): boolean {
-  if (typeof (value) === 'string') {
-    return value !== '';
-  } else if (value instanceof Array) {
-    return value.every(val => Required(val)) && value.length > 0;
-  } else {
-    return value !== undefined && value !== null;
-  }
-
+    if (typeof value === "string") {
+        return value !== "";
+    } else if (value instanceof Array) {
+        return value.every((val) => Required(val)) && value.length > 0;
+    } else {
+        return value !== undefined && value !== null;
+    }
 }
 
 /**
@@ -27,8 +26,10 @@ export function Required(value: any): boolean {
  * @param equal 是否等于最小长度
  */
 export function MinLength(str: string, min: number, equal: boolean = true): boolean {
-  if (IsEmpy([str, min])) { return false; }
-  return equal ? str.length <= min : str.length < min;
+    if (IsEmpy([str, min])) {
+        return false;
+    }
+    return equal ? str.length <= min : str.length < min;
 }
 
 /**
@@ -38,8 +39,10 @@ export function MinLength(str: string, min: number, equal: boolean = true): bool
  * @param equal 是否等于最大长度
  */
 export function MaxLength(str: string, max: number, equal: boolean = true): boolean {
-  if (IsEmpy([str, max])) { return false; }
-  return equal ? str.length >= max : str.length > max;
+    if (IsEmpy([str, max])) {
+        return false;
+    }
+    return equal ? str.length >= max : str.length > max;
 }
 
 /**
@@ -50,13 +53,15 @@ export function MaxLength(str: string, max: number, equal: boolean = true): bool
  * @param equal 是否等于最小/最大范围
  */
 export function RangeLength(str: string, min: number, max: number, equal: boolean = true): boolean {
-  if (IsEmpy([str, min, max])) { return false; }
-  const length = str.length;
-  if (equal) {
-    return length >= min && length <= max;
-  } else {
-    return length > min && length < max;
-  }
+    if (IsEmpy([str, min, max])) {
+        return false;
+    }
+    const length = str.length;
+    if (equal) {
+        return length >= min && length <= max;
+    } else {
+        return length > min && length < max;
+    }
 }
 
 /**
@@ -66,10 +71,12 @@ export function RangeLength(str: string, min: number, max: number, equal: boolea
  * @param equal 是否等于比较数值
  */
 export function Min(val: number | string, min: number, equal: boolean = true): boolean {
-  if (IsEmpy([val, min])) { return false; }
-  var _val = parseFloat(val + '');
-  var equalVal = parseFloat(min + '');
-  return equal ? _val <= equalVal : _val < equalVal;
+    if (IsEmpy([val, min])) {
+        return false;
+    }
+    var _val = parseFloat(val + "");
+    var equalVal = parseFloat(min + "");
+    return equal ? _val <= equalVal : _val < equalVal;
 }
 
 /**
@@ -79,10 +86,12 @@ export function Min(val: number | string, min: number, equal: boolean = true): b
  * @param equal 是否等于比较数值
  */
 export function Max(val: number | string, max: number, equal: boolean = true): boolean {
-  if (IsEmpy([val, max])) { return false; }
-  var _val = parseFloat(val + '');
-  var equalVal = parseFloat(max + '');
-  return equal ? _val >= equalVal : _val > equalVal;
+    if (IsEmpy([val, max])) {
+        return false;
+    }
+    var _val = parseFloat(val + "");
+    var equalVal = parseFloat(max + "");
+    return equal ? _val >= equalVal : _val > equalVal;
 }
 
 /**
@@ -93,13 +102,15 @@ export function Max(val: number | string, max: number, equal: boolean = true): b
  * @param equal 是否等于最小/最大范围
  */
 export function Range(val: number | string, min: number, max: number, equal: boolean = true): boolean {
-  if (IsEmpy([val, min, max])) { return false; }
-  var _val = parseFloat(val + '');
-  if (equal) {
-    return _val >= min && _val <= max;
-  } else {
-    return _val > min && _val < max;
-  }
+    if (IsEmpy([val, min, max])) {
+        return false;
+    }
+    var _val = parseFloat(val + "");
+    if (equal) {
+        return _val >= min && _val <= max;
+    } else {
+        return _val > min && _val < max;
+    }
 }
 
 /**
@@ -108,12 +119,14 @@ export function Range(val: number | string, min: number, max: number, equal: boo
  * @param regexp 正则字符串
  */
 export function Pattern(val: string, regexp: string | RegExp): boolean {
-  if (IsEmpy([val, regexp])) { return false; }
-  if (typeof regexp === 'string') {
-    return (new RegExp(regexp)).test(val);
-  } else if (regexp instanceof RegExp) {
-    return regexp.test(val);
-  } else {
-    throw new Error('未知正则类型')
-  }
+    if (IsEmpy([val, regexp])) {
+        return false;
+    }
+    if (typeof regexp === "string") {
+        return new RegExp(regexp).test(val);
+    } else if (regexp instanceof RegExp) {
+        return regexp.test(val);
+    } else {
+        throw new Error("未知正则类型");
+    }
 }

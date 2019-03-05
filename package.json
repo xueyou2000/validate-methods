@@ -1,18 +1,23 @@
 {
     "name": "@validate/validate-methods",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "publisher": "XueYou",
-    "typings": "dist/src/index.d.ts",
+    "typings": "dts/index.d.ts",
     "description": "常用验证函数",
-    "main": "dist/validate-methods.js",
-    "module": "dist/validate-methods.es.js",
+    "main": "es/index.js",
+    "module": "es/index.js",
     "files": [
-        "/dist/"
+        "es",
+        "lib",
+        "dts"
     ],
     "scripts": {
-        "build": "cross-env NODE_ENV=production rollup -c",
         "test": "jest",
-        "_publish": "npm run test && npm run build && npm publish"
+        "coverage": "jest --coverage",
+        "build": "tsc && yarn run build:es && yarn run build:lib",
+        "build:es": "rollup --config rollup.config.es.js",
+        "build:lib": "rollup --config rollup.config.lib.js",
+        "_publish": "yarn run test && yarn run build && npm publish"
     },
     "keywords": [
         "validate"
@@ -23,43 +28,22 @@
     },
     "repository": {
         "type": "git",
-        "url": "http://m.bank-pay.com:3080/xueyou/validate-methods"
+        "url": "git+https://github.com/xueyou2000/validate-methods.git"
     },
     "license": "MIT",
     "publishConfig": {
         "registry": "http://m.bank-pay.com:8081/repository/npm-my/"
     },
     "devDependencies": {
-        "@types/jest": "^23.3.2",
-        "cross-env": "^5.2.0",
-        "identity-obj-proxy": "^3.0.0",
-        "jest": "^23.5.0",
+        "@types/jest": "^24.0.6",
+        "jest": "^24.1.0",
+        "coveralls": "^3.0.2",
         "rollup": "^0.65.2",
-        "rollup-plugin-node-resolve": "^3.4.0",
-        "rollup-plugin-progress": "^0.4.0",
-        "rollup-plugin-typescript2": "^0.17.0",
-        "ts-jest": "^23.1.4",
-        "typescript": "^3.0.3"
-    },
-    "jest": {
-        "collectCoverageFrom": [
-            "src/**/*.{js,jsx,ts,tsx}"
-        ],
-        "transform": {
-            "^.+\\.ts?$": "ts-jest"
-        },
-        "moduleNameMapper": {
-            "\\.(css|less)$": "identity-obj-proxy"
-        },
-        "testMatch": [
-            "<rootDir>/tests/**/*.spce.(j|t)s"
-        ],
-        "moduleFileExtensions": [
-            "ts",
-            "js"
-        ],
-        "transformIgnorePatterns": [
-            "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|ts|tsx)$"
-        ]
+        "rollup-plugin-node-resolve": "^4.0.0",
+        "rollup-plugin-progress": "^1.0.0",
+        "rollup-plugin-typescript": "^1.0.0",
+        "ts-jest": "^23.10.5",
+        "tslib": "^1.9.3",
+        "typescript": "^3.3.3"
     }
 }

@@ -3,15 +3,14 @@
  * @description 数值验证函数
  */
 
-import { IsEmpy } from './helper';
-
+import { IsEmpy } from "./helper";
 
 /**
  * 验证整数格式
  * @param number 整数
  */
 export function IsDigits(number: number | string): boolean {
-  return /^\d+$/.test(number + '');
+    return /^\d+$/.test(number + "");
 }
 
 /**
@@ -20,9 +19,11 @@ export function IsDigits(number: number | string): boolean {
  * @param step 倍数
  */
 export function IsStep(val: number | string, step: number) {
-  if (IsEmpy([val, step])) { return false; }
-  var _val = parseFloat(val + '');
-  return (_val % step) === 0;
+    if (IsEmpy([val, step])) {
+        return false;
+    }
+    var _val = parseFloat(val + "");
+    return _val % step === 0;
 }
 
 /**
@@ -32,9 +33,11 @@ export function IsStep(val: number | string, step: number) {
  * @param bits 金额小数范围
  */
 export function Amount(amount: string | number, canBeZero: boolean = false, bits: number = 6): boolean {
-  if (IsEmpy(amount)) { return false; }
-  amount = parseFloat(amount + '');
-  if (amount == 0 && canBeZero == false) return false;
-  var regexp = new RegExp('^([1-9][\\d]{0,7}|0)(\\.[\\d]{1,' + bits + '})?$');
-  return regexp.test(amount + '');
+    if (IsEmpy(amount)) {
+        return false;
+    }
+    amount = parseFloat(amount + "");
+    if (amount == 0 && canBeZero == false) return false;
+    var regexp = new RegExp("^([1-9][\\d]{0,7}|0)(\\.[\\d]{1," + bits + "})?$");
+    return regexp.test(amount + "");
 }

@@ -3,14 +3,14 @@
  * @description 类型验证函数
  */
 
-import { IsEmpy } from './helper';
+import { IsEmpy } from "./helper";
 
 /**
  * 验证数值类型
  * @param number 数值
  */
 export function IsNumber(number: string | number): boolean {
-  return /^(?:-?\d+|-?\d{1,3}(?:,\d{3})+)?(?:\.\d+)?$/.test(number + '');
+    return /^(?:-?\d+|-?\d{1,3}(?:,\d{3})+)?(?:\.\d+)?$/.test(number + "");
 }
 
 /**
@@ -18,9 +18,11 @@ export function IsNumber(number: string | number): boolean {
  * @param func 函数
  */
 export function IsFunction(func: any): boolean {
-  if (IsEmpy(func)) { return false; }
-  const typeName: string = Object.prototype.toString.call(func);
-  return typeName.indexOf('Function') != -1;
+    if (IsEmpy(func)) {
+        return false;
+    }
+    const typeName: string = Object.prototype.toString.call(func);
+    return typeName.indexOf("Function") != -1;
 }
 
 /**
@@ -28,7 +30,9 @@ export function IsFunction(func: any): boolean {
  * @param array 数组
  */
 export function IsArray(array: any): boolean {
-  if (!array) { return false; }
-  const typeName: string = Object.prototype.toString.call(array);
-  return typeName.indexOf('Array') != -1;
+    if (!array) {
+        return false;
+    }
+    const typeName: string = Object.prototype.toString.call(array);
+    return typeName.indexOf("Array") != -1;
 }

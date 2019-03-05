@@ -1,23 +1,18 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "module": "es6",
-    "moduleResolution": "node",
-    "target": "es6",
-    "sourceMap": true,
-    "declaration": true,
-    "esModuleInterop": true,
-    "lib": [
-      "es6",
-      "dom",
-    ],
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    }
-  },
-  "exclude": [
-    "src/**"
-  ]
+    "compilerOptions": {
+        "baseUrl": "./",
+        "outDir": "es",
+        "declarationDir": "dts",
+        "module": "esnext",
+        "declaration": true,
+        "skipLibCheck": true,
+        "moduleResolution": "node",
+        "target": "esnext",
+        "esModuleInterop": true,
+        "lib": ["esnext", "dom"],
+        "paths": {
+            "@/*": ["src/*"]
+        }
+    },
+    "include": ["src"]
 }

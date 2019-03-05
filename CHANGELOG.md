@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.0.5 (March, 5, 2019)
+
+-   更新依赖版本
+-   分离 es, lib 打包
+-   修复 tests 文件正确结尾单词`*.spec.ts`
+-   使用`tsc`打包`es`版, 使用`rollup`打包单文件版本
+
 ## 1.0.4 (January, 16, 2019)
 
 -   修复日期验证 31 天的 BUG
