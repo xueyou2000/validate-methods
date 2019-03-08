@@ -3,7 +3,7 @@ node_modules/
 /dist/
 /lib/
 /es/
-/dts/
+/typings/
 /coverage/
 /.rpt2_cache/
 npm-debug.log*

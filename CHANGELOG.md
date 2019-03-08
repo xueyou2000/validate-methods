@@ -1,5 +1,10 @@
 # Change Log
 
+## 1.0.51 (March 8, 2019)
+
+-   更改输出目标`esnext`为`es6`
+-   更改`.d.ts`目录为`typings`
+
 ## 1.0.5 (March, 5, 2019)
 
 -   更新依赖版本

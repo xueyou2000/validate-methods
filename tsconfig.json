@@ -2,16 +2,19 @@
     "compilerOptions": {
         "baseUrl": "./",
         "outDir": "es",
-        "module": "esnext",
+        "module": "es6",
         "declaration": true,
+        "declarationDir": "typings",
         "skipLibCheck": true,
         "moduleResolution": "node",
+        "sourceMap": true,
         "target": "esnext",
-        "esModuleInterop": true,
         "lib": ["esnext", "dom"],
         "paths": {
             "@/*": ["src/*"]
-        }
+        },
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true
     },
     "include": ["src"]
 }
