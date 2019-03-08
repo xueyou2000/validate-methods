@@ -3,13 +3,12 @@
     "version": "1.0.51",
     "description": "常用验证函数",
     "publisher": "XueYou",
-    "typings": "typings/index.d.ts",
+    "typings": "es/index.d.ts",
     "main": "dist/index.js",
     "module": "es/index.js",
     "files": [
         "es",
-        "dist",
-        "typings"
+        "dist"
     ],
     "scripts": {
         "test": "jest",
