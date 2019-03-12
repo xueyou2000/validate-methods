@@ -30,9 +30,6 @@
         "url": "git+https://github.com/xueyou2000/validate-methods.git"
     },
     "license": "MIT",
-    "publishConfig": {
-        "registry": "http://192.168.1.22:8081/repository/npm-my/"
-    },
     "devDependencies": {
         "@types/jest": "^24.0.6",
         "coveralls": "^3.0.2",
