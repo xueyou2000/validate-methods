@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.0.52 (Tue Mar 19 2019)
+
+-   更改输出目标`esnext`为`es5`
+
 ## 1.0.51 (March 8, 2019)
 
 -   更改输出目标`esnext`为`es6`
