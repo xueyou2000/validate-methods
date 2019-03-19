@@ -1,10 +1,10 @@
 {
     "name": "validate-methods",
-    "version": "1.0.52",
+    "version": "1.0.53",
     "description": "常用验证函数",
     "publisher": "XueYou",
     "typings": "es/index.d.ts",
-    "main": "dist/index.js",
+    "main": "es/index.js",
     "module": "es/index.js",
     "files": [
         "es",

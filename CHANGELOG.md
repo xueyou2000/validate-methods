@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.0.53 (Tue Mar 19 2019)
+
+-   默认使用`es`模块
+
 ## 1.0.52 (Tue Mar 19 2019)
 
 -   更改输出目标`esnext`为`es5`
