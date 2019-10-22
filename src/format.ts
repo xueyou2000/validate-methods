@@ -87,6 +87,11 @@ export function NotChinese(val: string): boolean {
 
 /**
  * 验证银行卡号格式(卢恩算法)
+ * @description Luhn算法也称为“模10算法”（Modulus 10或Mod 10）算法，
+ * 是一种简单的校验和算法，一般用于验证身份识别码，
+ * 例如发卡行识别码、国际移动设备辨识码（IMEI），美国国家提供商标识号码，或是加拿大社会保险号码。
+ * 它是由IBM科学家Hans Peter Luhn创造，于1954年1月6日申请专利，1960年8月23日颁证，美国专利号2950048。该算法已经得到了广泛的应用，
+ * 例如和我们信用卡相关ISO/IEC 7812-1标准就采纳了这一算法。
  * @param card 银行卡号
  */
 export function BankCard(card: string): boolean {
