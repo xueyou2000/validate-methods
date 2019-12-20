@@ -1,6 +1,6 @@
 {
     "name": "validate-methods",
-    "version": "1.0.54",
+    "version": "1.1.0",
     "description": "常用验证函数",
     "publisher": "XueYou",
     "typings": "es/index.d.ts",

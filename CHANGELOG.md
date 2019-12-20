@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.1.0 (Fri Dec 20 2019)
+
+-   增加`EqualLength`字符串长度相等验证
+
 ## 1.0.54 (Thu Sep 05 2019)
 
 -   更新手机号验证正则

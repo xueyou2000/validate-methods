@@ -1,4 +1,4 @@
-import { MinLength, MaxLength, RangeLength, Min, Max, Range, Pattern, Required } from "../src";
+import { MinLength, MaxLength, RangeLength, Min, Max, Range, Pattern, Required, EqualLength } from "../src";
 
 test("Required", () => {
     expect(Required("")).toBeFalsy();
@@ -25,6 +25,13 @@ test("RangeLength", () => {
     expect(RangeLength("abcde", 3, 5)).toBeTruthy();
     expect(RangeLength("abcde", 5, 5)).toBeTruthy();
     expect(RangeLength("abcde", 3, 5, true)).toBeTruthy();
+});
+
+test("EqualLength", () => {
+    expect(EqualLength("abcde", 3)).toBeFalsy();
+    expect(EqualLength("123456", 6)).toBeTruthy();
+    // 不允许传入空字符串
+    expect(EqualLength("", 0)).toBeFalsy();
 });
 
 test("Min", () => {

@@ -32,6 +32,7 @@ console.log(IsEmail("xx@gmail.com") === true);
 -   `MinLength(str: string, min: number, equal: boolean = true)` 验证字符串长度是否小于 min
 -   `MaxLength(str: string, max: number, equal: boolean = true)` 验证字符串长度是否大于 max
 -   `RangeLength(str: string, min: number, max: number, equal: boolean = true)` 验证字符串长度在范围内
+-   `EqualLength(str: string, length: number)` 验证字符串长度是否等于 length
 -   `Min(val: number | string, min: number, equal: boolean = true)` 验证数值是否小于 min
 -   `Max(val: number | string, max: number, equal: boolean = true)` 验证数值是否大于 min
 -   `Range(val: number | string, min: number, max: number, equal: boolean = true)` 验证数值是否在某个范围内

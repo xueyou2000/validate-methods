@@ -65,6 +65,18 @@ export function RangeLength(str: string, min: number, max: number, equal: boolea
 }
 
 /**
+ * 字符串长度是否等于 length
+ * @param str
+ * @param length
+ */
+export function EqualLength(str: string, length: number): boolean {
+    if (IsEmpy([str, length])) {
+        return false;
+    }
+    return str.length === length;
+}
+
+/**
  * 验证数值是否小于min
  * @param val 数值
  * @param min 比较数值
